@@ -41,6 +41,7 @@
 		width: 80%;
 		margin: auto;
 		position: relative;
+		z-index: 0;
 	}
 	.well, .panel {
 		background-color: #58595b;
@@ -71,6 +72,20 @@
 		background-color: grey; 
 		position: relative;
 	}
+	#server {
+		position: absolute;
+		z-index: 50;
+		bottom: 0px;
+		left: -40px;
+		width: 230px;
+		height: auto;
+		margin: 0px 0px;
+	}
+	.form-group {
+		position: relative;
+		z-index: 1;
+		padding-left: 175px;
+	}
 
 	label, .panel-title, h5, h4 {
 		font-family:'Roboto Condensed', sans-serif;
@@ -90,8 +105,10 @@
 					      <img src="../../public/assets/images/burger-builder-logo.png" alt="Burger Builder Logo" width="729" height="218">
 					  	</div>
 					<!-- </div> -->
-
+					
 					<div id="orderWell" class="well well-lg">
+						
+						
 						<form>
 						  <div class="form-group">
 						    <label for="orderInformation" style="color: #ffd600; margin-right: 10px; font-size: 14pt">ORDER HERE</label>
@@ -100,6 +117,7 @@
 						  
 						  <button type="submit" class="btn btn-warning" style="color: #58595b; position: absolute; right:25px; bottom: 20px"><b>SUBMIT ORDER</b></button>
 						</form>
+						<img id="server" src="../../public/assets/images/server.png" width="193" height="161">
 					</div>
 					<br><br>
 

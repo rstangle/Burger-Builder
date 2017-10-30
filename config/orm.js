@@ -5,16 +5,16 @@ var connection = require("../config/connection.js");
 // data in the database.
 //========================================================================================
 
-// var orm = {
-//   selectAll: function(tableInput, cb) {
-//     var queryString = "SELECT * FROM " + tableInput + ";";
-//     connection.query(queryString, function(err, result) {
-//       if (err) {
-//         throw err;
-//       }
-//       cb(result);
-//     });
-//   },
+var orm = {
+  selectAll: function(tableInput, cb) {
+    var queryString = "SELECT * FROM " + tableInput + ";";
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
 
   // Copied from the MVC Example in-class excercise 17. Originally the 'create' method.
   // insertOne: function(table, cols, vals, cb) {
@@ -56,12 +56,12 @@ var connection = require("../config/connection.js");
 //       cb(result);
 //     });
 //   }
-// };
+};
 
 
 //========================================================================================
 
 // Export the orm object for the model (burgers.js).
-// module.exports = orm;
+module.exports = orm;
 
 //========================================================================================
