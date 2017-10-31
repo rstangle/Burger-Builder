@@ -17,9 +17,8 @@
 		background-image: url("../../assets/images/background.png");
 		background-repeat: repeat;
 		background-color: #414042;
-		/*background-position: center center;*/
 		background-attachment: fixed;
-		/*background-size: cover;*/
+		padding-bottom: 150px;
 	}
 	.jumbotron {
 		background: none;
@@ -36,7 +35,8 @@
 		background: rgba(65, 64, 66, 0.8);
 		width:80%;
 		margin: auto;
-		min-height: 1000px;
+		min-height: 1200px;
+		height: auto;
 	}
 	#orderWell {
 		width: 80%;
@@ -96,5 +96,33 @@
 	</head>
 	<body>
 		{{{ body }}}
+
+
+		<!-- <script>
+
+		$(function() {
+		  $("#devourButton").on("click", function(event) {
+		    var id = $(this).data("id");
+		    var newDevourState = $(this).data("newsleep");
+
+		    var newSleepState = {
+		      sleepy: newSleep
+		    };
+
+		    // Send the PUT request.
+		    $.ajax("/api/cats/" + id, {
+		      type: "PUT",
+		      data: newSleepState
+		    }).then(
+		      function() {
+		        console.log("changed sleep to", newSleep);
+		        // Reload the page to get the updated list
+		        location.reload();
+		      }
+		    );
+		  });
+		});
+
+		</script> -->
 	</body>
 </html>

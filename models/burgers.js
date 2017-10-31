@@ -11,6 +11,16 @@ var burger = {
      	 cb(res);
     	});
   	},
+  	create: function(val, cb) {
+  		orm.create(val, function(res) {
+  			cb(res);
+  		});
+  	},
+  	update: function(objColVals, condition, cb) {
+   		orm.update("cats", objColVals, condition, function(res) {
+      		cb(res);
+   		});
+  	}
 };
 
 //=====================================================================================
