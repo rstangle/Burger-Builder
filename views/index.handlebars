@@ -29,25 +29,21 @@
 							  </div>
 							  <div class="panel-body">
 							    
-							    <div class="well">
-							    <h4 style="color:white"> BURGER GOES HERE </h4> 
-							    <br>
-									<button type="submit" class="btn btn-warning" style="font-size: 8pt; position: absolute; right: 10px; bottom: 10px; color:#58595b"><b>DEVOUR</b></button>
-							    </div>
+							    {{#each burgers}}
+							    	<div class="well">
+							    		<h4 style="color:white"> {{burger_name}} </h4> 
+							    		<br>
+										<button data-id="{{id}}" type="submit" class="btn btn-warning" style="font-size: 8pt; position: absolute; right: 10px; bottom: 10px; color:#58595b"><b>DEVOUR</b></button>
+							    	</div>
+							    {{/each}}
 
-							    <div class="well">
-							    <h4 style="color:white"> BURGER GOES HERE </h4> 
-							    <br>
-									<button type="submit" class="btn btn-warning" style="font-size: 8pt; position: absolute; right: 10px; bottom: 10px; color:#58595b"><b>DEVOUR</b></button>
-							    </div>
-
-
+							   
 							  </div>
 							</div>
 							
 							<div id="eaten" class="panel panel-danger" style="float:right">
 							  <div class="panel-heading">
-							    <h2 class="panel-title" style="text-align: center"><b>THAT WAS TASTY</b></h2>
+							    <h2 class="panel-title" style="text-align: center"><b>TASTY!</b></h2>
 							  </div>
 							  <div class="panel-body">
 							   <div class="well">

@@ -4,9 +4,10 @@ var orm = require("../config/orm.js");
 //=====================================================================================
 
 var burger = {
-
-	all: function(cb) {
-    	orm.all("burgers", function(res) { //"burgers" refers to the table in the db
+	// this function goes to the ORM file.  passes arguements burgers and function(res)
+	//"burgers" refers to the table in the db
+	selectAll: function(cb) {
+    	orm.selectAll("burgers", function(res) { 
      	 cb(res);
     	});
   	},
@@ -15,6 +16,6 @@ var burger = {
 //=====================================================================================
 
 // Export the database functions for the controller (catsController.js).
-module.exports = burgers;
+module.exports = burger;
 
 //=====================================================================================

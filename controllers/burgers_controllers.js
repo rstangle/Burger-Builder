@@ -4,7 +4,7 @@ var express = require("express");
 // Putting this is since it is in the in-class example #17 MVC Example.
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Import the model (burgers.js) to use its database functions.
 var burgers = require("../models/burgers.js");
 
 //=======================================================================================================
@@ -12,7 +12,14 @@ var burgers = require("../models/burgers.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-	res.render("index");
+	burgers.selectAll(function(data) {
+		var hbsObject = {
+			burgers: data
+		};
+		console.log(hbsObject);
+		res.render("index", hbsObject);
+	});
+	// res.render("index");
   // cat.all(function(data) {
   //   var hbsObject = {
   //     cats: data
