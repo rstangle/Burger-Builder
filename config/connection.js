@@ -1,13 +1,19 @@
 // Set up MySQL connection. Boiler Plate.  
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
+var connection;
+
+ if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+  } else {
+  connection = mysql.createConnectin({
   port: 8889, // change port to 8889 for my machine
   host: "localhost",
   user: "root",
   password: "root",
   database: "burgers_db"
-});
+  });
+};
 
 // Make connection.
 connection.connect(function(err) {
